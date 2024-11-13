@@ -1,0 +1,327 @@
+/* Reseta as margens e paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FFD700; /* Amarelo */
+    padding: 15px 30px;
+}
+
+.logo {
+    font-size: 24px;
+}
+
+.menu{
+    background-color: #b39c43;
+    padding: 10px;
+    display:flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: solid;
+    color: #333;
+    font-weight: bold;
+}
+
+.header-icons a {
+    margin-left: 15px;
+}
+
+.icon{
+    width: 20px;
+}
+
+/* Banner */
+.carousel {
+    text-align: center;
+    margin: 50px 0;
+    position: relative; /* Permite que as imagens sejam posicionadas corretamente */
+    width: 100%;
+}
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    overflow: hidden; /* Garante que as imagens não saiam da área do carrossel */
+}
+
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* Transição suave para a mudança das imagens */
+}
+
+.carousel-slide {
+    width: 100%;
+    height: auto;
+    opacity: 0; /* As imagens começam invisíveis */
+    transition: opacity 0.5s ease-in-out;
+}
+
+.carousel-slide.active {
+    opacity: 1; /* A imagem ativa fica visível */
+}
+
+.carousel-indicators {
+    margin-top: 20px;
+}
+
+.carousel-indicators .indicator {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background-color: #ccc;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.carousel-indicators .indicator.active {
+    background-color: #FFD700; /* Indicador ativo com cor dourada */
+    transform: scale(1.2);
+}
+
+.carousel-indicators .indicator:hover {
+    background-color: #FFD700;
+    transform: scale(1.4); /* Aumenta o tamanho ao passar o mouse */
+}
+
+
+/* Produtos em Destaque */
+.produtos-destaque {
+    text-align: start;
+    padding: 50px;
+}
+
+.produtos-destaque h2 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #333;
+}
+
+.produtos-grid {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    flex-wrap: wrap;
+}
+
+.produto-item {
+    background-color: #f9f9f9;
+    width: 220px; /* Ajuste a largura para dar um pouco mais de espaço */
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: transform 0.3s ease-in-out; /* Transição suave ao passar o mouse */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para destacar o item */
+    overflow: hidden; /* Garante que a imagem não saia da área do produto */
+}
+
+.produto-item:hover {
+    transform: translateY(-5px); /* Levanta o item ao passar o mouse */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Aumenta a sombra para dar mais destaque */
+}
+
+.produto-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease; /* Transição suave na imagem */
+}
+
+.produto-item:hover {
+    transform: scale(1.05); /* Aumenta a imagem ao passar o mouse */
+}
+
+.small-description{
+    margin: 10px 0 0 0;
+}
+
+.produto-item .detalhes-btn {
+    background-color: #FFD700;
+    border: none;
+    padding: 10px;
+    color: #fff;
+    cursor: pointer;
+    margin-top: 15px;
+    width: 100%;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.produto-item .detalhes-btn:hover {
+    background-color: #e5b700;
+}
+
+.produto-item .detalhes-btn:focus {
+    outline: none; /* Remove o contorno ao focar no botão */
+    background-color: #e5b700;
+}
+
+/* Produtos por datas comemorativas */
+
+.date {
+    text-align: start;
+    padding: 50px;
+}
+
+.date h2 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #333;
+}
+
+.produtos-grid2 {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.produto-card {
+    margin: 20px 0 0 0;
+    background-color: #f9f9f9;
+    width: 220px; /* Ajuste a largura para dar um pouco mais de espaço */
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out; /* Transição suave ao passar o mouse */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para destacar o item */
+    overflow: hidden; /* Garante que a imagem não saia da área do produto */
+}
+
+.produto-dates:hover {
+    transform: translateY(-5px); /* Levanta o item ao passar o mouse */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Aumenta a sombra para dar mais destaque */
+}
+
+.produto-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease; /* Transição suave na imagem */
+}
+
+.produto-cards:hover {
+    transform: scale(1.05); /* Aumenta a imagem ao passar o mouse */
+}
+
+.small-description{
+    margin: 10px 0 0 0;
+}
+
+.produto-card .detalhes-btn {
+    background-color: #FFD700;
+    border: none;
+    padding: 10px;
+    color: #fff;
+    cursor: pointer;
+    margin-top: 15px;
+    width: 100%;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.produto-card .detalhes-btn:hover {
+    background-color: #e5b700;
+}
+
+.produto-card .detalhes-btn:focus {
+    outline: none; /* Remove o contorno ao focar no botão */
+    background-color: #e5b700;
+}
+
+
+
+/*Footer*/
+
+.footer {
+    background-color: #FFD700;
+    color: #000000;
+    padding: 30px 0;
+    font-family: Arial, sans-serif;
+    margin-top: 50px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    flex: 1;
+    margin: 20px;
+    min-width: 250px;
+}
+
+.footer-section h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.footer-section p, .footer-section a {
+    font-size: 1rem;
+    color: #000000;
+    line-height: 1.6;
+}
+
+.footer-section a {
+    text-decoration: none;
+}
+
+.footer-section a:hover {
+    color: #FFD700;
+}
+
+.social-links {
+    display: flex;
+    gap: 10px;
+}
+
+.social-icon {
+   
+    padding: 10px;
+    color: #000000;
+    text-decoration: none;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top: 1px solid #000000;
+}
+
+.footer-bottom p {
+    font-size: 1rem;
+    color: #000000;
+}
