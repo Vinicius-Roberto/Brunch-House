@@ -8,6 +8,7 @@
 
 body{
     background-color: #D9B68B;
+    
 }
 
 /* Header */
@@ -107,11 +108,11 @@ header a img{
 }
 
 .indicator.active {
-    background-color: #FFD700;
+    background-color: #BF5B04;
 }
 
 .indicator:hover {
-    background-color: #FFD700;
+    background-color: #401801;
     transform: scale(1.2);
 }
 
@@ -123,6 +124,7 @@ header a img{
 
 /* Produtos Destaques */
 .produtos-destaque{
+    background: #bf5b04c9;
     width: 100%;
     height: auto;
     margin-top: 20px;
@@ -137,22 +139,26 @@ header a img{
 
 .produtos-grid{
     display: grid;
-    justify-content: flex-start;
-    grid-template-columns: 20% 20% 20% 20%;
-    gap: 50px;
+    justify-content: space-between;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 20px;
 }
 
 .produto-item {
+    display: inline-block;
     background-color: #D9CEC5;
-    width: 250px; /* Tamanho fixo do card */
-    height: 300px; /* Altura do card (ajuste conforme necessário) */
+    width: auto; /* Tamanho fixo do card */
+    max-width: 250px;
+    height: 270px; /* Altura do card (ajuste conforme necessário) */
     /* border: 1px solid black; */
     border-radius: 20px;
     justify-content: center;
     overflow: hidden; /* Garante que nada saia do card */
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
-
+.produto-item img{
+    max-width: 100%;
+}
 
 .detalhes{
     display: flex;
@@ -194,13 +200,6 @@ header a img{
     padding: 10px 0 20px 0;
     font-family: "italiana", sans-serif;
     font-size: 20px;
-}
-
-.produtos-grid2{
-    display: grid;
-    justify-content: flex-start;
-    grid-template-columns: 20% 20% 20% 20%;
-    gap: 20px;
 }
 
 /* Footer */
@@ -275,6 +274,8 @@ header a img{
     font-size: 1rem;
     color: #D9CEC5; /* Texto no rodapé em Bege Suave */
 }
+
+
 
 
 
