@@ -9,9 +9,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
     <!-- ----- -->
-
+    <link rel="stylesheet" href="../static/css/style.css">
     <title>Brunch House</title>
-    <link rel="stylesheet" href="../statics/css/style.css">
+    
 </head>
 <body>
 
@@ -20,14 +20,14 @@
         <div class="logo">BRUNCH HOUSE</div>
         
         <div class="header-icons">
-            <a href="#"><img src="../statics/images/icon-carrinho.png" alt="Carrinho" class="icon"></a>
-            <a href="#"><img src="../statics/images/icon-perfil.png" alt="Perfil" class="icon"></a>
+            <a href="#"><img src="../static/images/icon-carrinho.png" alt="Carrinho" class="icon"></a>
+            <a href="#"><img src="../static/images/icon-perfil.png" alt="Perfil" class="icon"></a>
         </div>
     </header>
     <nav class="menu">
         <ul>
             <li><a href="#">Cestas de Café da Manhã</a></li>
-            <li><a href="../htmls/produtos.html">Produtos</a></li>
+            <li><a href="{{ url_for('produtos') }}">Produtos</a></li>
             <li><a href="#">Favoritos</a></li>
             <li><a href="#">Sobre Nós</a></li>
         </ul>
@@ -37,9 +37,9 @@
     <section class="carousel">
         <div class="carousel-container">
             <div class="carousel-images">
-                <img src="../statics/images/image-banner.png" alt="Banner 1" class="carousel-slide active">
-                <img src="../statics/images/image-banner.png" alt="Banner 2" class="carousel-slide">
-                <img src="../statics/images/image-banner.png" alt="Banner 3" class="carousel-slide">
+                <img src="../static/images/image-banner.png" alt="Banner 1" class="carousel-slide active">
+                <img src="../static/images/image-banner.png" alt="Banner 2" class="carousel-slide">
+                <img src="../static/images/image-banner.png" alt="Banner 3" class="carousel-slide">
             </div>
             <div class="carousel-indicators">
                 <span class="indicator active"></span>
@@ -56,7 +56,7 @@
         <h2>PRODUTOS EM DESTAQUE</h2>
         <div class="produtos-grid">
             <div class="produto-item">
-                <img src="../statics/images/download (1).jpeg" alt="">
+                <img src="../static/images/download (1).jpeg" alt="">
                 <p class="small-description">Lorem Ipsum</p>
                 <div class="detalhes">
                     <span class="preco">R$200</span>
@@ -64,7 +64,7 @@
                 </div>
             </div>
             <div class="produto-item">
-                <img src="../statics/images/download (1).jpeg" alt="">
+                <img src="../static/images/download (1).jpeg" alt="">
                 <p class="small-description">Lorem Ipsum</p>
                 <div class="detalhes">
                     <span class="preco">R$200</span>
@@ -72,7 +72,7 @@
                 </div>
             </div>
             <div class="produto-item">
-                <img src="../statics/images/download (1).jpeg" alt="">
+                <img src="../static/images/download (1).jpeg" alt="">
                 <p class="small-description">Lorem Ipsum</p>
                 <div class="detalhes">
                     <span class="preco">R$200</span>
@@ -80,7 +80,7 @@
                 </div>
             </div>
             <div class="produto-item">
-                <img src="../statics/images/download (1).jpeg" alt="">
+                <img src="../static/images/download (1).jpeg" alt="">
                 <p class="small-description">Lorem Ipsum</p>
                 <div class="detalhes">
                     <span class="preco">R$200</span>
@@ -88,7 +88,7 @@
                 </div>
             </div>
             <div class="produto-item">
-                <img src="../statics/images/download (1).jpeg" alt="">
+                <img src="../static/images/download (1).jpeg" alt="">
                 <p class="small-description">Lorem Ipsum</p>
                 <div class="detalhes">
                     <span class="preco">R$200</span>
@@ -146,12 +146,7 @@
     </footer>
     
 
-    <script src="../statics/js/Script.js"></script>
-
-</body>
-</html>
-
-    <script src="../statics/js/Script.js"></script>
+    <script src="../static/js/Script.js"></script>
 
 </body>
 </html>
