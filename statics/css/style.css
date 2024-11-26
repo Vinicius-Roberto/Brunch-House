@@ -1,18 +1,18 @@
-/* Reseta as margens e paddings */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #2c1101;
 }
 
-body{
+body {
     background-color: #D9B68B;
-    
 }
 
 /* Header */
-header{
+header {
+    max-width: 100%;
     display: flex;
     background-color: #732C02;
     align-items: center;
@@ -20,7 +20,7 @@ header{
     padding: 20px;
 }
 
-.logo{
+.logo {
     margin: 0 0 0 20px;
     color: #D9B68B;
     font-family: "Italiana", sans-serif;
@@ -28,34 +28,42 @@ header{
     text-decoration: solid;
 }
 
-header a img{
+header a img {
     width: 20px;
     margin: 0 20px 0 0;
 }
 
 /* Nav do menu */
-
-.menu{
+.menu {
+    width: 100%;
     background-color: #401801;
-    /* border-top: 1px  solid black; */
-    padding: 10px;
-    margin-bottom: 20px;
+    padding: 10px 0;
+    box-sizing: border-box;
 }
 
-.menu ul{
+.menu ul {
     display: flex;
+    flex-wrap: wrap;
     list-style-type: none;
-    align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-around;
+    padding: 0;
+    margin: 0;
 }
 
-.menu ul li a{
+.menu ul li {
+    flex: 1;
+    text-align: center;
+}
+
+.menu ul li a {
     text-decoration: none;
     color: #D9B68B;
-    padding: 10px 100px 10px 100px;
+    padding: 10px 50px;
     transition: background-color 0.3s ease, color 0.3s ease;
+    white-space: nowrap;
 }
-.menu ul li a:hover{
+
+.menu ul li a:hover {
     background-color: #732C02;
 }
 /* Fim nav e Header*/
@@ -83,6 +91,7 @@ header a img{
 .carousel-slide {
     width: 100%;
     height: 100%;  /* Garante que a imagem ocupe toda a altura do carrossel */
+    border-radius: 20px;
     object-fit: cover; /* Garante que a imagem ocupe todo o espaço do carrossel sem distorcer, podendo cortar partes da imagem */
     display: block;
 }
@@ -260,7 +269,8 @@ header a img{
 }
 
 .social-icon:hover {
-    background-color: #D9B68B; /* Ícones sociais com fundo Bege Claro ao passar o mouse */
+    color: #401801;
+    color: #D9B68B; /* Ícones sociais com fundo Bege Claro ao passar o mouse */
 }
 
 .footer-bottom {
@@ -275,5 +285,62 @@ header a img{
     color: #D9CEC5; /* Texto no rodapé em Bege Suave */
 }
 
+/* Estilo Responsivo para Header e Menu */
 
+/* Para telas menores que 768px (Mobile) */
+/* Responsividade Adicionada */
 
+/* Para telas menores que 768px (Mobile) */
+@media (max-width: 768px) {
+    .carousel {
+        max-width: 100%; /* Ocupa toda a largura disponível */
+        padding: 10px;
+    }
+
+    .produtos-grid {
+        grid-template-columns: 1fr 1fr; /* Um produto por linha */
+        gap: 15px;
+    }
+
+    .date {
+        padding: 20px;
+    }
+
+    .footer-container {
+        flex-direction: column; /* Organiza as seções em coluna */
+        align-items: center;
+    }
+
+    .footer-section {
+        text-align: center;
+        margin: 20px 0;
+        min-width: 100%;
+    }
+}
+
+/* Para telas entre 768px e 1200px (Intermediário) */
+@media (min-width: 768px) and (max-width: 1200px) {
+    .carousel {
+        max-width: 80%; /* Reduz a largura para telas intermediárias */
+        padding: 15px;
+    }
+
+    .produtos-grid {
+        grid-template-columns: 1fr 1fr 1fr; /* Dois produtos por linha */
+        gap: 20px;
+    }
+
+    .date {
+        padding: 30px;
+    }
+
+    .footer-container {
+        flex-wrap: wrap; /* Permite quebra de linha se necessário */
+        justify-content: center;
+    }
+
+    .footer-section {
+        flex: 1 1 45%; /* Ocupa até 45% da largura disponível */
+        text-align: center;
+    }
+}
