@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 body{
@@ -61,7 +61,7 @@ header a img{
 
 /* barra de busca */
 .search-bar-container h1{
-    padding: 10px 0 20px 0;
+    padding: 10px 0 20px 0px;
     font-family: "italiana", sans-serif;
     font-size: 20px;
 } 
@@ -69,7 +69,7 @@ header a img{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 20px 40px 20px 40px;
+    padding: 20px 40px 20px 50px;
     border-radius: 10px;
 }
 
