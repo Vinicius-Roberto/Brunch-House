@@ -1,0 +1,243 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #2c1101;
+}
+
+body {
+    background-color: #D9B68B;
+}
+
+/* Header */
+header {
+    max-width: 100%;
+    display: flex;
+    background-color: #732C02;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.logo {
+    margin: 0 0 0 20px;
+    color: #D9B68B;
+    font-family: "Italiana", sans-serif;
+    font-size: 30px;
+    text-decoration: solid;
+}
+
+header a img {
+    width: 20px;
+    margin: 0 20px 0 0;
+}
+
+/* Nav do menu */
+.menu {
+    width: 100%;
+    background-color: #401801;
+    padding: 10px 0;
+    box-sizing: border-box;
+}
+
+.menu ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    justify-content: space-around;
+    padding: 0;
+    margin: 0;
+}
+
+.menu ul li {
+    flex: 1;
+    text-align: center;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: #D9B68B;
+    padding: 10px 50px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    white-space: nowrap;
+}
+
+.menu ul li a:hover {
+    background-color: #732C02;
+}
+/* Estilo principal */
+main {
+    max-width: 900px;
+    margin: 30px auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1#title {
+    text-align: center;
+    font-family: 'Italiana', serif;
+    color: #732C02;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+
+
+/* Estilo do item no carrinho */
+#lista-carrinho li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    padding: 15px 0;
+    transition: background-color 0.3s ease;
+    position: relative; /* Adicionando um contexto de posicionamento relativo */
+}
+
+#lista-carrinho li:hover {
+    background-color: #f8f8f8; /* Efeito de hover para os itens */
+}
+
+#lista-carrinho li .item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    gap: 20px; /* Espaçamento entre os itens */
+}
+
+#lista-carrinho li .item img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover; /* Garantir que a imagem fique proporcional */
+    border-radius: 8px; /* Imagem arredondada */
+}
+
+#lista-carrinho li .item-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+#lista-carrinho li .item-info span {
+    font-size: 14px;
+    color: #555;
+}
+
+#lista-carrinho li .item-info .item-nome {
+    font-weight: bold;
+    color: #2c1101;
+}
+
+/* Botão de remover no canto direito */
+#lista-carrinho li .item button.remover {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    padding: 8px 12px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    width: 100px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute; /* Posicionando o botão de remover */
+    right: 0; /* Alinhando o botão à direita */
+}
+
+#lista-carrinho li .item button.remover:hover {
+    background-color: #cc0000;
+}
+
+#lista-carrinho li .item button.remover:focus {
+    outline: 2px solid #732C02; /* Estilo de foco para acessibilidade */
+    outline-offset: 2px;
+}
+
+/* Total e ações */
+#total {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: right;
+    margin-top: 20px;
+    color: #333;
+}
+
+.acoes {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.acoes button,
+.acoes a {
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.acoes button#comprar {
+    background-color: green;
+    color: #fff;
+}
+.acoes button#comprar:hover {
+    background-color: rgb(0, 54, 0);
+}
+
+.acoes button#limpar-carrinho {
+    background-color: red;
+    color: #fff;
+}
+
+.acoes button#limpar-carrinho:hover {
+    background-color: #7a0202;
+}
+
+.acoes a#continuar-comprando {
+    background-color: #BF5B04;
+    color: #fff;
+    display: inline-block;
+    text-align: center;
+}
+
+.acoes a#continuar-comprando:hover {
+    background-color: #7a471a;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    header, nav.menu, main {
+        padding: 10px;
+    }
+
+    nav.menu ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav.menu ul li {
+        margin-bottom: 10px;
+    }
+
+    .acoes {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .acoes button,
+    .acoes a {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
