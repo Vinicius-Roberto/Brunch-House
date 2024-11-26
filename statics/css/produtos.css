@@ -1,17 +1,18 @@
-/* Reseta as margens e paddings */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #2c1101;
 }
 
-body{
+body {
     background-color: #D9B68B;
 }
 
 /* Header */
-header{
+header {
+    max-width: 100%;
     display: flex;
     background-color: #732C02;
     align-items: center;
@@ -19,7 +20,7 @@ header{
     padding: 20px;
 }
 
-.logo{
+.logo {
     margin: 0 0 0 20px;
     color: #D9B68B;
     font-family: "Italiana", sans-serif;
@@ -27,34 +28,42 @@ header{
     text-decoration: solid;
 }
 
-header a img{
+header a img {
     width: 20px;
     margin: 0 20px 0 0;
 }
 
 /* Nav do menu */
-
-.menu{
+.menu {
+    width: 100%;
     background-color: #401801;
-    /* border-top: 1px  solid black; */
-    padding: 10px;
-    margin-bottom: 20px;
+    padding: 10px 0;
+    box-sizing: border-box;
 }
 
-.menu ul{
+.menu ul {
     display: flex;
+    flex-wrap: wrap;
     list-style-type: none;
-    align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-around;
+    padding: 0;
+    margin: 0;
 }
 
-.menu ul li a{
+.menu ul li {
+    flex: 1;
+    text-align: center;
+}
+
+.menu ul li a {
     text-decoration: none;
     color: #D9B68B;
-    padding: 10px 100px 10px 100px;
+    padding: 10px 50px;
     transition: background-color 0.3s ease, color 0.3s ease;
+    white-space: nowrap;
 }
-.menu ul li a:hover{
+
+.menu ul li a:hover {
     background-color: #732C02;
 }
 /* Fim nav e Header*/
