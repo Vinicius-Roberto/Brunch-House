@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../static/css/detalhes-produto-style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="logo">BRUNCH HOUSE</div>
+        
+        <div class="header-icons">
+            <a href="#"><img src="../static/images/icon-carrinho.png" alt="Carrinho" class="icon"></a>
+            <a href="#"><img src="../static/images/icon-perfil.png" alt="Perfil" class="icon"></a>
+        </div>
+    </header>
+    <nav class="menu">
+        <ul>
+            <li><a href="#">Cestas de Café da Manhã</a></li>
+            <li><a href="{{ url_for('produtos') }}">Produtos</a></li>
+            <li><a href="#">Favoritos</a></li>
+            <li><a href="#">Sobre Nós</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <img src="../static/images/image-banner.png" alt="" class="image-item">
+        <section id="details">
+            <h2 id="name-item">Amor em Cada Mordida</h2>
+            <p id="details-text">A Cesta Amor em Cada Mordida é perfeita para celebrar o aniversário de namoro com muito carinho e sabor. Ela é cuidadosamente montada para proporcionar uma experiência única, cheia de delícias que agradam ao paladar e aquecem o coração. Cada item foi escolhido para transformar o momento em uma lembrança inesquecível.</p>
+            <button id="add-car"> <img src="../static/images/icon-carrinho.png" alt="">Adicionar ao Carrinho</button>
+        </section>
+    </main>
+
+    <section class="more-details">
+        <h3>Detalhes da cesta:</h3>
+        <h4>Delícias Doces:</h4>
+    <ul>
+        <li>Mini bolos decorados com tema romântico.</li>
+        <li>Brigadeiros e trufas artesanais em caixinhas personalizadas.</li>
+        <li>Um pote de mel ou geleia caseira para adoçar o momento.</li>
+    </ul>
+
+    <h4>Sabores Salgados:</h4>
+    <ul>
+        <li>Pães de queijo quentinhos.</li>
+        <li>Mini croissants recheados.</li>
+        <li>Um toque especial de queijos e frios selecionados.</li>
+    </ul>
+
+    <h4>Bebidas:</h4>
+    <ul>
+        <li>Uma garrafa de espumante ou suco natural para brindar.</li>
+        <li>Sachês de café gourmet ou chá aromático.</li>
+    </ul>
+
+    <h4>Itens Personalizados:</h4>
+    <ul>
+        <li>Um cartão personalizado com uma mensagem especial para a data.</li>
+        <li>Um buquê de flores pequenas para dar o toque final.</li>
+    </ul>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Sobre nós</h3>
+                <p>Somos uma empresa dedicada a oferecer produtos de qualidade para todos os momentos especiais.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Redes sociais</h3>
+                <div class="social-links">
+                    <a href="#" class="social-icon">Facebook</a>
+                    <a href="#" class="social-icon">Instagram</a>
+                    <a href="#" class="social-icon">Twitter</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Contato</h3>
+                <p>Email: contato@empresa.com</p>
+                <p>Telefone: +55 11 98765-4321</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 BrunchHouse. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>
