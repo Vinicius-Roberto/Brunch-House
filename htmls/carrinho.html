@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <!-- ----- -->
+    <link rel="stylesheet" href="../static/css/carrinho.css">
+
+    <title>Meu Carrinho</title>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <a href="{{ url_for('index') }}" style="text-decoration: none;"><div class="logo">BRUNCH HOUSE</div></a>
+        
+        <div class="header-icons">
+            <a href="#"><img src="../static/images/icon-carrinho.png" alt="Carrinho" class="icon"></a>
+            <a href="#"><img src="../static/images/icon-perfil.png" alt="Perfil" class="icon"></a>
+        </div>
+    </header>
+    <nav class="menu">
+        <ul>
+            <li><a href="{{ url_for('produtos') }}">Produtos</a></li>
+            <li><a href="#">Favoritos</a></li>
+            <li><a href="#">Sobre Nós</a></li>
+        </ul>
+    </nav>
+
+    <h1 id="title">Meu Carrinho</h1>
+
+    <main>
+        <!-- Lista de itens do carrinho -->
+        <ul id="lista-carrinho">
+
+            <li>
+                <div class="item">
+                    <img src="../static/images/download (1).jpeg" alt="Imagem do Produto" class="item-imagem">
+                    <div class="item-info">
+                        <span class="item-nome">Cesta de Café da Manhã</span>
+                        <span class="item-quantidade">Quantidade: 1</span>
+                        <span class="item-preco">R$ 49,90</span>
+                    </div>
+                    <button class="remover">Remover</button>
+                </div>
+            </li>
+            <!-- Itens serão carregados dinamicamente -->
+        </ul>
+
+        <!-- Total do carrinho -->
+        <p id="total">Total: R$ 0,00</p>
+
+        <!-- Ações -->
+        <div class="acoes">
+            <button id="limpar-carrinho">Limpar Carrinho</button>
+            <button id="comprar">Comprar</button>
+            
+        </div>
+    </main>
+
+    <script src="../static/js/carrinho.js"></script>
+</body>
+</html>
