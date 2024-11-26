@@ -1,0 +1,267 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #2c1101;
+}
+
+body {
+    background-color: #D9B68B;
+}
+
+/* Header */
+header {
+    max-width: 100%;
+    display: flex;
+    background-color: #732C02;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.logo {
+    margin: 0 0 0 20px;
+    color: #D9B68B;
+    font-family: "Italiana", sans-serif;
+    font-size: 30px;
+    text-decoration: solid;
+}
+
+header a img {
+    width: 20px;
+    margin: 0 20px 0 0;
+}
+
+/* Nav do menu */
+.menu {
+    width: 100%;
+    background-color: #401801;
+    padding: 10px 0;
+    box-sizing: border-box;
+}
+
+.menu ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    justify-content: space-around;
+    padding: 0;
+    margin: 0;
+}
+
+.menu ul li {
+    flex: 1;
+    text-align: center;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: #D9B68B;
+    padding: 10px 50px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    white-space: nowrap;
+}
+
+.menu ul li a:hover {
+    background-color: #732C02;
+}
+
+/* Main */
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 50px;
+}
+
+.image-item {
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
+
+#details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    padding: 20px;
+}
+
+#name-item {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+#details-text {
+    font-size: 19px;
+}
+
+#add-car {
+    text-decoration: solid;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 15px;
+    border: 0;
+    border-radius: 10px;
+    background-color: #732C02;
+    color: #D9B68B;
+    cursor: pointer;
+    margin-top: 50px;
+    padding: 10px;
+    width: 250px;
+    transition: background-color 0.3s ease;
+}
+
+#add-car:hover {
+    color: #D9B68B;
+    background-color: #401801;
+}
+
+#add-car img {
+    justify-content: center;
+    width: 20px;
+    margin: 0;
+}
+
+.more-details {
+    padding: 20px;
+    background-color: rgba(250, 235, 215, 0.37);
+    border-radius: 15px;
+    margin: 0 50px 0 50px;
+}
+
+.more-details h4, .more-details ul {
+    padding-left: 50px;
+    margin-top: 20px;
+}
+
+/* Footer */
+.footer {
+    background-color: #401801;
+    color: #D9CEC5;
+    padding: 30px 0;
+    font-family: Arial, sans-serif;
+    margin-top: 50px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    flex: 1;
+    margin: 20px;
+    min-width: 250px;
+}
+
+.footer-section h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #D9B68B;
+}
+
+.footer-section p, .footer-section a {
+    font-size: 1rem;
+    color: #D9CEC5;
+    line-height: 1.6;
+}
+
+.footer-section a {
+    text-decoration: none;
+}
+
+.footer-section a:hover {
+    color: #D9B68B;
+}
+
+.social-links {
+    display: flex;
+    gap: 10px;
+}
+
+.social-icon {
+    padding: 10px;
+    color: #fff;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.social-icon:hover {
+    color: #D9B68B;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top: 1px solid #732C02;
+}
+
+.footer-bottom p {
+    font-size: 1rem;
+    color: #D9CEC5;
+}
+
+/* Responsividade */
+/* Para telas menores que 768px (Mobile) */
+@media (max-width: 768px) {
+    .menu ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu ul li {
+        width: 100%;
+    }
+
+    .menu ul li a {
+        padding: 10px 20px;
+    }
+
+    main {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+
+    .more-details {
+        margin: 0 20px;
+    }
+}
+
+/* Para telas entre 768px e 1200px (Intermediário) */
+@media (min-width: 768px) and (max-width: 1200px) {
+    main {
+        grid-template-columns: 1fr 1fr;
+        gap: 25px;
+        padding: 40px;
+    }
+
+    .menu ul {
+        gap: 20px;
+    }
+
+    #add-car {
+        width: 200px;
+        font-size: 14px;
+    }
+
+    .more-details {
+        margin: 0 30px;
+    }
+}
+
+/* Para telas maiores que 1200px (Desktop) */
+@media (min-width: 1200px) {
+    main {
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+}
