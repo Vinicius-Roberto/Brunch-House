@@ -259,9 +259,3 @@ main {
 }
 
 /* Para telas maiores que 1200px (Desktop) */
-@media (min-width: 1200px) {
-    main {
-        grid-template-columns: 1fr 1fr;
-        gap: 20px;
-    }
-}
