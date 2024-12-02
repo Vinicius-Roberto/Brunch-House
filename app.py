@@ -1,7 +1,7 @@
 import os
 from flask import Flask, render_template
 
-app = Flask(__name__, template_folder=os.path.join(os.getcwd(), 'htmls'))
+app = Flask(__name__i)
 
 @app.route("/")
 def index():
