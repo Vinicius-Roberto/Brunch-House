@@ -1,26 +1,11 @@
-    
+{% extends "default.html" %}    
+
     {% block csseTitle %}
     <link rel="stylesheet" href="../static/css/detalhes-produto-style.css">
     <title>Document</title>
     {% endblock %}
-</head>
-<body>
-    <header>
-        <a href="index.html" style="text-decoration: none;"><div class="logo">BRUNCH HOUSE</div></a>
-        
-        <div class="header-icons">
-            <a href="carrinho.html"><img src="../static/image/icon-carrinho.png" alt="Carrinho" class="icon"></a>
-            <a href="#"><img src="../static/image/icon-perfil.png" alt="Perfil" class="icon"></a>
-        </div>
-    </header>
-    <nav class="menu">
-        <ul>
-            <li><a href="produtos.html">Produtos</a></li>
-            <li><a href="#">Favoritos</a></li>
-            <li><a href="#">Sobre Nós</a></li>
-        </ul>
-    </nav>
 
+    {% block content %}
     <main>
         <img src="../static/image/image-banner.png" alt="" class="image-item">
         <section id="details">
@@ -32,8 +17,8 @@
   <div id="modal" class="modal">
     <div class="modal-content">
       <p>O produto foi adicionado ao carrinho!</p>
-      <a href="produtos.html"><button id="continuar-comprando">Continuar Comprando</button></a>
-      <a href="carrinho.html"><button id="ir-carrinho">Ir ao Carrinho</button></a>
+      <a href="produtos"><button id="continuar-comprando">Continuar Comprando</button></a>
+      <a href="carrinho"><button id="ir-carrinho">Ir ao Carrinho</button></a>
     </div>
   </div>
   <script>
@@ -86,31 +71,8 @@
     </ul>
     </section>
 
-    <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-section">
-                <h3>Sobre nós</h3>
-                <p>Somos uma empresa dedicada a oferecer produtos de qualidade para todos os momentos especiais.</p>
-            </div>
-            <div class="footer-section">
-                <h3>Redes sociais</h3>
-                <div class="social-links">
-                    <a href="#" class="social-icon">Facebook</a>
-                    <a href="#" class="social-icon">Instagram</a>
-                    <a href="#" class="social-icon">Twitter</a>
-                </div>
-            </div>
-            <div class="footer-section">
-                <h3>Contato</h3>
-                <p>Email: contato@empresa.com</p>
-                <p>Telefone: +55 11 98765-4321</p>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2024 BrunchHouse. Todos os direitos reservados.</p>
-        </div>
-    </footer>
+    {% endblock %}
 
+    {% block script %}
     <script src="Script.js"></script>
-</body>
-</html>
+    {% endblock %}

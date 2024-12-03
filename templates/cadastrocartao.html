@@ -1,32 +1,11 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+{% extends "default.html" %}
+    
+    {% block csseTitle %}
     <link rel="stylesheet" href="../static/css/cadastrarcartao.css">
-    <title>Document</title>
-</head>
-<body>
-    <header>
-        <a href="index.html" style="text-decoration: none;"><div class="logo">BRUNCH HOUSE</div></a>
-        
-        <div class="header-icons">
-            <a href="carrinho.html"><img src="../static/image/icon-carrinho.png" alt="Carrinho" class="icon"></a>
-            <a href="#"><img src="../static/image/icon-perfil.png" alt="Perfil" class="icon"></a>
-        </div>
-    </header>
-    <nav class="menu">
-        <ul>
-            <li><a href="produtos.html">Produtos</a></li>
-            <li><a href="#">Favoritos</a></li>
-            <li><a href="#">Sobre Nós</a></li>
-        </ul>
-    </nav>
+    <title>Cadastro de Cartão</title>
+    {% endblock %}
 
+    {% block content %}
     <main>
         
     <section class="more-details">
@@ -75,6 +54,8 @@
       <a href="carrinho.html"><button id="ir-carrinho">Ir ao Carrinho</button></a>
     </div>
   </div>
+</main>
+  {% block script %}
   <script>
     // Seleciona os elementos do DOM
     const adicionarCarrinhoBtn = document.getElementById('adicionar-carrinho');
@@ -93,36 +74,6 @@
       }
     });
   </script>
+  <script src="Script.js"></script>
   <!-- <script src="script.js"></script> -->
-    </main>
-
-
-
-    <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-section">
-                <h3>Sobre nós</h3>
-                <p>Somos uma empresa dedicada a oferecer produtos de qualidade para todos os momentos especiais.</p>
-            </div>
-            <div class="footer-section">
-                <h3>Redes sociais</h3>
-                <div class="social-links">
-                    <a href="#" class="social-icon">Facebook</a>
-                    <a href="#" class="social-icon">Instagram</a>
-                    <a href="#" class="social-icon">Twitter</a>
-                </div>
-            </div>
-            <div class="footer-section">
-                <h3>Contato</h3>
-                <p>Email: contato@empresa.com</p>
-                <p>Telefone: +55 11 98765-4321</p>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2024 BrunchHouse. Todos os direitos reservados.</p>
-        </div>
-    </footer>
-
-    <script src="Script.js"></script>
-</body>
-</html>
+    {% endblock %}
