@@ -1,0 +1,21 @@
+id,nome,preco,imagem,tipo,descricao
+1,Cesta de Páscoa –  “Doce Renascimento”,"R$ 149,99",../static/image/XXXXX.XXX,P,Celebre a Páscoa com uma cesta cheia de sabores e significados
+2,Cesta de Dia das Mães – “Carinho em Cada Detalhe”,"R$ 139,90",,M,Mostre todo o amor e gratidão com uma cesta pensada especialmente para as mães.
+3,Cesta de Namorados – “O amor está na cesta”,"R$ 139,90",,G,"Para comemorar o amor, esta cesta é cheia de delícias e pequenos gestos de carinho."
+4,Cesta de Festa Junina – “Arraiá de Sabores”,"R$ 99,99",,P,Traga o clima de festa junina para quem você gosta com esta cesta temática e divertida.
+5,"Cesta de Aniversário - ""Um novo tempo""","R$ 129,99",,M,"Para comemorar o amor, esta cesta é cheia de delícias e pequenos gestos de carinho."
+6,Cesta de Natal – “Magia e Encanto”,"R$ 149,99",,G,Reúna os sabores e a magia do Natal em uma cesta que celebra união e alegria.
+7,Cesta Bom Dia Clássico:,"R$ 89,99",,P,Ideal para quem adora os sabores tradicionais de um café da manhã simples e delicioso. C
+8,Cesta Café da Manhã Fitness:,"R$ 129,99",,M,Perfeita para quem adota um estilo de vida saudável e quer começar o dia com energia.
+9,Cesta Doce Manhã:,"R$ 139,99",,G,Feita para quem adora começar o dia com sabores açucarados e delicados.
+10,Cesta Café a Dois:,"R$ 99,99",,P,"Pensada para momentos românticos e especiais, onde cada detalhe reforça o amor e a conexão."
+11,Cesta Manhã Tropical:,"R$ 109,99",,M,"Traz a leveza e a frescura dos sabores tropicais, perfeita para quem adora frutas e alimentos leves."
+12,Cesta Café Gourmet,"R$ 139,99",,G,Escolha perfeita para quem aprecia sabores sofisticados e exclusivos. 
+13,Cesta Manhã de Relaxamento,"R$ 109,99",,P,Perfeita para momentos tranquilos e revigorantes
+14,Cesta Café Vegetariano,"R$ 149,99",,M, Ideal para quem segue uma dieta sem carnes e busca um café da manhã nutritivo e saboroso.
+15,Cesta Manhã Infantil,"R$ 139,99",,G,Criada para encantar e alegrar os pequenos com itens saborosos e divertidos.
+16,Cesta Região Brasileira,"R$ 99,99",,P,"Celebra os sabores autênticos do Brasil, trazendo o gostinho de casa para um café da manhã especial."
+17,Espumante - Adicional,"R$ 99,99",,Adicional,Delicoso espumante nacional para celebração de momentos.
+18,Vinho - Adicional,"R$ 199,99",,Adicional,"Vinho chileno, feito para amplificar a alegria de momentos com alguém."
+19,Balões - Adicional,"R$ 39,99",,Adicional,"Balões de cores diversas, para incrementar uma comemoração,"
+20,Flores - Adicional,"R$ 79,99",,Adicional,

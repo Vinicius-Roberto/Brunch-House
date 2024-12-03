@@ -1,5 +1,6 @@
 import os
 from flask import Flask, render_template
+import pandas as pd
 
 app = Flask(__name__)
 
@@ -14,7 +15,9 @@ def perfil():
 
 @app.route("/produtos")
 def produtos():
-    return render_template("produtos.html")
+    df = pd.read_csv('tabela_brunchhouse.csv')
+    produtos = df.to_dict('records')
+    return render_template('produtos.html', produtos=produtos)
 
 @app.route("/carrinho")
 def carrinho():
@@ -36,5 +39,9 @@ def especiais():
 def pagamento():
     return render_template("pagamento.html")
 
+@app.route("/cadastro-cartao")
+def cadastro():
+    return render_template("cadastrocartao.html")
+    
 if __name__ == "__main__":
     app.run(debug=True)

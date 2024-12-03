@@ -22,88 +22,18 @@
 
     <section class="produtos">
         <div class="produtos-grid">
-            <div class="produto-item">
-                <img src="../static/image/download (1).jpeg" alt="">
-                <p class="small-description">Lorem Ipsum</p>
-                <div class="detalhes">
-                    <span class="preco">R$200</span>
-                    <a href="detalhes-produtos" class="detalhes-btn">Detalhes</a>
-                </div>
-            </div>
-            <div class="produto-item">
-                <img src="../static/image/download (1).jpeg" alt="">
-                <p class="small-description">Lorem Ipsum</p>
-                <div class="detalhes">
-                    <span class="preco">R$200</span>
-                    <a href="" class="detalhes-btn">Detalhes</a>
-                </div>
-            </div>
-            <div class="produto-item">
-                <img src="../static/image/download (1).jpeg" alt="">
-                <p class="small-description">Lorem Ipsum</p>
-                <div class="detalhes">
-                    <span class="preco">R$200</span>
-                    <a href="" class="detalhes-btn">Detalhes</a>
-                </div>
-            </div>
-            <div class="produto-item">
-                <img src="../static/image/download (1).jpeg" alt="">
-                <p class="small-description">Lorem Ipsum</p>
-                <div class="detalhes">
-                    <span class="preco">R$200</span>
-                    <a href="" class="detalhes-btn">Detalhes</a>
-                </div>
-            </div>
-            <div class="produto-item">
-                <img src="../static/image/download (1).jpeg" alt="">
-                <p class="small-description">Lorem Ipsum2</p>
-                <div class="detalhes">
-                    <span class="preco">R$200</span>
-                    <a href="" class="detalhes-btn">Detalhes</a>
-                </div>
-            </div>
-            <div class="produto-item">
-                <img src="../static/image/download (1).jpeg" alt="">
-                <p class="small-description">Lorem Ipsum2</p>
-                <div class="detalhes">
-                    <span class="preco">R$200</span>
-                    <a href="" class="detalhes-btn">Detalhes</a>
-                </div>
-            </div>
-            <div class="produto-item">
-                <img src="../static/image/download (1).jpeg" alt="">
-                <p class="small-description">Lorem Ipsum2</p>
-                <div class="detalhes">
-                    <span class="preco">R$200</span>
-                    <a href="" class="detalhes-btn">Detalhes</a>
-                </div>
-            </div>
-            <div class="produto-item">
-                <img src="../static/image/download (1).jpeg" alt="">
-                <p class="small-description">Lorem Ipsum2</p>
-                <div class="detalhes">
-                    <span class="preco">R$200</span>
-                    <a href="" class="detalhes-btn">Detalhes</a>
-                </div>
-            </div>
-            <div class="produto-item">
-                <img src="../static/image/download (1).jpeg" alt="">
-                <p class="small-description">Lorem Ipsum2</p>
-                <div class="detalhes">
-                    <span class="preco">R$200</span>
-                    <a href="" class="detalhes-btn">Detalhes</a>
-                </div>
-            </div>
-            <div class="produto-item">
-                <img src="../static/image/download (1).jpeg" alt="">
-                <p class="small-description">Lorem Ipsum2</p>
-                <div class="detalhes">
-                    <span class="preco">R$200</span>
-                    <a href="" class="detalhes-btn">Detalhes</a>
-                </div>
-            </div>
 
-            <!-- Mais produtos aqui -->
+            {% for produto in produtos %}
+            <div class="produto-item">
+                <img src="{{ produto['imagem'] }}" alt="{{ produto['nome'] }}">
+                <p class="small-description">{{ produto['nome'] }}</p>
+                <div class="detalhes">
+                    <span class="preco">{{ produto['preco' ]}}</span>
+                    <a href="detalhes-produtos/{{ produto['id'] }}" class="detalhes-btn">Detalhes</a>
+                </div>
+            </div>
+            {% endfor %}
+
         </div>
     </section>
 </section>
