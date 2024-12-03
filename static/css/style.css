@@ -34,6 +34,15 @@ header a img {
 }
 
 /* Nav do menu */
+
+.menu-icon {
+    display: none; /* Esconde o ícone por padrão */
+    font-size: 30px;
+    color: #D9B68B;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
 .menu {
     width: 100%;
     background-color: #401801;
@@ -149,7 +158,7 @@ header a img {
 .produtos-grid{
     display: grid;
     justify-content: space-between;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr ;
     gap: 20px;
 }
 
@@ -158,7 +167,7 @@ header a img {
     background-color: #D9CEC5;
     width: auto; /* Tamanho fixo do card */
     max-width: 250px;
-    height: 270px; /* Altura do card (ajuste conforme necessário) */
+    height: auto; /* Altura do card (ajuste conforme necessário) */
     /* border: 1px solid black; */
     border-radius: 20px;
     justify-content: center;
@@ -173,7 +182,7 @@ header a img {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 30px 20px 0 20px;
+    padding: 30px 20px 30px 20px;
 }
 
 .produto-item p {
@@ -292,6 +301,49 @@ header a img {
 
 /* Para telas menores que 768px (Mobile) */
 @media (max-width: 768px) {
+    /* Exibe o ícone do menu hambúrguer em dispositivos móveis */
+    .menu-icon {
+        display: block; /* Exibe o ícone */
+        font-size: 30px;
+        color: #D9B68B;
+        cursor: pointer;
+        position: absolute; /* Faz com que o ícone seja posicionado de forma absoluta */
+        left: 10%; /* Move o ícone para o meio horizontal */
+        transform: translateX(-50%); /* Ajusta o ícone para que ele fique exatamente no centro */
+        z-index: 10; /* Garante que o ícone fique acima de outros elementos */
+    }
+
+    .menu {
+        background-color: #401801;
+        padding: 20px ;
+        box-sizing: border-box;
+        display: flex; /* Habilita flexbox */
+        justify-content: space-between; /* Ajusta os itens para as extremidades */
+        align-items: center; /* Alinha verticalmente ao centro */
+        position: relative; /* Necessário para posicionamento absoluto do ícone de menu */
+    }
+    
+
+    /* Esconde o menu em dispositivos móveis por padrão */
+    .menu ul {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        background-color: #401801;
+        padding: 20px;
+    }
+
+    .menu ul li {
+        text-align: left;
+        padding: 10px 20px;
+    }
+
+    /* Exibe o menu quando a classe 'active' for adicionada */
+    .menu.active ul {
+        display: flex;
+    }
+
+    
     .carousel {
         max-width: 100%; /* Ocupa toda a largura disponível */
         padding: 10px;
@@ -302,7 +354,7 @@ header a img {
         gap: 15px;
     }
 
-    .date {
+    .date, .produtos-destaque {
         padding: 20px;
     }
 
