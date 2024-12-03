@@ -140,7 +140,7 @@ header a img {
     background-color: #D9CEC5;
     width: auto; /* Tamanho fixo do card */
     max-width: 250px;
-    height: 270px; /* Altura do card (ajuste conforme necessário) */
+    height: auto; /* Altura do card (ajuste conforme necessário) */
     /* border: 1px solid black; */
     border-radius: 20px;
     justify-content: center;
@@ -155,7 +155,7 @@ header a img {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 30px 20px 0 20px;
+    padding: 30px 20px 30px 20px;
 }
 
 .produto-item p {
@@ -250,5 +250,102 @@ header a img {
     color: #D9CEC5; /* Texto no rodapé em Bege Suave */
 }
 
+@media (max-width: 768px) {
+    /* Exibe o ícone do menu hambúrguer em dispositivos móveis */
+    .menu-icon {
+        display: block; /* Exibe o ícone */
+        font-size: 30px;
+        color: #D9B68B;
+        cursor: pointer;
+        position: absolute; /* Faz com que o ícone seja posicionado de forma absoluta */
+        left: 10%; /* Move o ícone para o meio horizontal */
+        transform: translateX(-50%); /* Ajusta o ícone para que ele fique exatamente no centro */
+        z-index: 10; /* Garante que o ícone fique acima de outros elementos */
+    }
 
+    .menu {
+        background-color: #401801;
+        padding: 20px ;
+        box-sizing: border-box;
+        display: flex; /* Habilita flexbox */
+        justify-content: space-between; /* Ajusta os itens para as extremidades */
+        align-items: center; /* Alinha verticalmente ao centro */
+        position: relative; /* Necessário para posicionamento absoluto do ícone de menu */
+    }
+    
+    .search-bar-container{
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Esconde o menu em dispositivos móveis por padrão */
+    .menu ul {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        background-color: #401801;
+        padding: 20px;
+    }
+
+    .menu ul li {
+        text-align: left;
+        padding: 10px 20px;
+    }
+
+    /* Exibe o menu quando a classe 'active' for adicionada */
+    .menu.active ul {
+        display: flex;
+    }
+
+    .produtos{
+        padding: 20px;
+    }
+    .produtos-grid {
+        grid-template-columns: 1fr 1fr; /* Um produto por linha */
+        gap: 15px;
+    }
+
+    .produtos-destaque {
+        padding: 10px;
+    }
+
+    .footer-container {
+        flex-direction: column; /* Organiza as seções em coluna */
+        align-items: center;
+    }
+
+    .footer-section {
+        text-align: center;
+        margin: 20px 0;
+        min-width: 100%;
+    }
+}
+
+/* Para telas entre 768px e 1200px (Intermediário) */
+@media (min-width: 768px) and (max-width: 1200px) {
+    .carousel {
+        max-width: 80%; /* Reduz a largura para telas intermediárias */
+        padding: 15px;
+    }
+
+    .produtos-grid {
+        grid-template-columns: 1fr 1fr 1fr; /* Dois produtos por linha */
+        gap: 20px;
+    }
+
+    .date {
+        padding: 30px;
+    }
+
+    .footer-container {
+        flex-wrap: wrap; /* Permite quebra de linha se necessário */
+        justify-content: center;
+    }
+
+    .footer-section {
+        flex: 1 1 45%; /* Ocupa até 45% da largura disponível */
+        text-align: center;
+    }
+}
 
