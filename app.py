@@ -8,6 +8,10 @@ app = Flask(__name__)
 def index():
     return render_template("index.html")
 
+@app.route("/perfil")
+def perfil():
+    return render_template("perfil.html")
+
 @app.route("/produtos")
 def produtos():
     return render_template("produtos.html")
