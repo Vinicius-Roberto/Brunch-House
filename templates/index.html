@@ -24,7 +24,10 @@
             <a href="#"><img src="../static/image/icon-perfil.png" alt="Perfil" class="icon"></a>
         </div>
     </header>
-    <nav class="menu">
+    <nav id="menu" class="menu">
+        <div class="menu-icon" onclick="toggleMenu()">
+            &#9776; <!-- Símbolo de hambúrguer -->
+        </div>
         <ul>
             <li><a href="produtos.html">Produtos</a></li>
             <li><a href="#produtos-destaque">Favoritos</a></li>
@@ -32,6 +35,7 @@
             <li><a href="#sobre-nos">Sobre Nós</a></li>
         </ul>
     </nav>
+    
 
     <!-- Carousel Principal -->
     <section class="carousel">
@@ -65,7 +69,7 @@
             </div>
             <div class="produto-item">
                 <img src="../static/image/download (1).jpeg" alt="">
-                <p class="small-description">Lorem Ipsum</p>
+                <p class="small-description">Cesta Bom Dia Clássico</p>
                 <div class="detalhes">
                     <span class="preco">R$200</span>
                     <a href="" class="detalhes-btn">Detalhes</a>
