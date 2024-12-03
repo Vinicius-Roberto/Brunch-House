@@ -21,7 +21,7 @@
     </header>
     <nav class="menu">
         <ul>
-            <li><a href="{{ url_for('produtos') }}">Produtos</a></li>
+            <li><a href="produtos.html">Produtos</a></li>
             <li><a href="#">Favoritos</a></li>
             <li><a href="#">Sobre Nós</a></li>
         </ul>
@@ -32,8 +32,35 @@
         <section id="details">
             <h2 id="name-item">Amor em Cada Mordida</h2>
             <p id="details-text">A Cesta Amor em Cada Mordida é perfeita para celebrar o aniversário de namoro com muito carinho e sabor. Ela é cuidadosamente montada para proporcionar uma experiência única, cheia de delícias que agradam ao paladar e aquecem o coração. Cada item foi escolhido para transformar o momento em uma lembrança inesquecível.</p>
-            <button id="add-car"> <img src="../static/image/icon-carrinho.png" alt="">Adicionar ao Carrinho</button>
+            <button id="adicionar-carrinho"> <img src="../static/image/icon-carrinho.png" alt="">Adicionar ao Carrinho</button>
         </section>
+        <!-- Modal -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <p>O produto foi adicionado ao carrinho!</p>
+      <a href="produtos.html"><button id="continuar-comprando">Continuar Comprando</button></a>
+      <a href="carrinho.html"><button id="ir-carrinho">Ir ao Carrinho</button></a>
+    </div>
+  </div>
+  <script>
+    // Seleciona os elementos do DOM
+    const adicionarCarrinhoBtn = document.getElementById('adicionar-carrinho');
+    const modal = document.getElementById('modal');
+    const fecharModalBtn = document.getElementById('fechar-modal');
+
+    // Exibe o modal ao clicar no botão "Adicionar ao Carrinho"
+    adicionarCarrinhoBtn.addEventListener('click', () => {
+      modal.style.display = 'flex';
+    });
+
+    // Fecha o modal ao clicar fora da área de conteúdo
+    modal.addEventListener('click', (event) => {
+      if (event.target === modal) {
+        modal.style.display = 'none';
+      }
+    });
+  </script>
+  <!-- <script src="script.js"></script> -->
     </main>
 
     <section class="more-details">
@@ -90,6 +117,6 @@
         </div>
     </footer>
 
-    <script src="../static/js/add-car.js"></script>
+    <script src="Script.js"></script>
 </body>
 </html>

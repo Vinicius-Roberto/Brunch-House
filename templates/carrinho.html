@@ -16,7 +16,7 @@
 <body>
     <!-- Header -->
     <header>
-        <a href="{{ url_for('index') }}" style="text-decoration: none;"><div class="logo">BRUNCH HOUSE</div></a>
+        <a href="/brunch-app/templates/index.html" style="text-decoration: none;"><div class="logo">BRUNCH HOUSE</div></a>
         
         <div class="header-icons">
             <a href="#"><img src="../static/image/icon-carrinho.png" alt="Carrinho" class="icon"></a>
@@ -25,7 +25,7 @@
     </header>
     <nav class="menu">
         <ul>
-            <li><a href="{{ url_for('produtos') }}">Produtos</a></li>
+            <li><a href="produtos.html">Produtos</a></li>
             <li><a href="#">Favoritos</a></li>
             <li><a href="#">Sobre Nós</a></li>
         </ul>
@@ -57,7 +57,7 @@
         <!-- Ações -->
         <div class="acoes">
             <button id="limpar-carrinho">Limpar Carrinho</button>
-            <button id="comprar">Comprar</button>
+            <a href="pagamento.html"><button id="comprar">Confirmar Compra</button></a>
             
         </div>
     </main>
