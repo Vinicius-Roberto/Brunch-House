@@ -20,5 +20,17 @@ def carrinho():
 def detalhes():
     return render_template("detalhes-produtos.html")
 
+@app.route("/produtos-destaque")
+def destaque():
+    return render_template("produto-destaque.html")
+
+@app.route("/produtos-especiais")
+def especiais():
+    return render_template("produtos-especiais.html")
+
+@app.route("/pagamento")
+def pagamento():
+    return render_template("pagamento.html")
+
 if __name__ == "__main__":
     app.run(debug=True)
