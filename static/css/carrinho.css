@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    margin: 0;
     box-sizing: border-box;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: #2c1101;
@@ -70,10 +71,8 @@ header a img {
 main {
     max-width: 900px;
     margin: 30px auto;
-    background: #fff;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 h1#title {
@@ -91,14 +90,9 @@ h1#title {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid #ddd;
     padding: 15px 0;
     transition: background-color 0.3s ease;
     position: relative; /* Adicionando um contexto de posicionamento relativo */
-}
-
-#lista-carrinho li:hover {
-    background-color: #f8f8f8; /* Efeito de hover para os itens */
 }
 
 #lista-carrinho li .item {
@@ -106,6 +100,9 @@ h1#title {
     justify-content: flex-start;
     align-items: center;
     width: 100%;
+    background-color: white;
+    padding: 5px;
+    border-radius: 10px;
     gap: 20px; /* Espaçamento entre os itens */
 }
 
@@ -124,7 +121,7 @@ h1#title {
 
 #lista-carrinho li .item-info span {
     font-size: 14px;
-    color: #555;
+    color: #2c1101;
 }
 
 #lista-carrinho li .item-info .item-nome {
@@ -148,7 +145,7 @@ h1#title {
     align-items: center;
     justify-content: center;
     position: absolute; /* Posicionando o botão de remover */
-    right: 0; /* Alinhando o botão à direita */
+    right: 10px; /* Alinhando o botão à direita */
 }
 
 #lista-carrinho li .item button.remover:hover {
@@ -161,6 +158,17 @@ h1#title {
 }
 
 /* Total e ações */
+.total-carrinho{
+    position: relative;
+}
+
+#total-itens{
+    position: absolute;
+    color: #333;
+    font-weight: bold;
+    bottom: 1px;
+}
+
 #total {
     font-size: 18px;
     font-weight: bold;
@@ -171,7 +179,7 @@ h1#title {
 
 .acoes {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     margin-top: 20px;
 }
 
@@ -179,7 +187,7 @@ h1#title {
 .acoes a {
     text-decoration: none;
     font-size: 16px;
-    padding: 10px 20px;
+    /* padding: 10px; */
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -190,18 +198,10 @@ h1#title {
 .acoes button#comprar {
     background-color: green;
     color: #fff;
+    padding: 10px;
 }
 .acoes button#comprar:hover {
     background-color: rgb(0, 54, 0);
-}
-
-.acoes button#limpar-carrinho {
-    background-color: red;
-    color: #fff;
-}
-
-.acoes button#limpar-carrinho:hover {
-    background-color: #7a0202;
 }
 
 .acoes a#continuar-comprando {
