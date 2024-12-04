@@ -13,36 +13,48 @@
     <main>
         <!-- Lista de itens do carrinho -->
         <ul id="lista-carrinho">
-
+            {% for produto in produtos %}
             <li>
                 <div class="item">
-                    <img src="../static/image/download (1).jpeg" alt="Imagem do Produto" class="item-imagem">
+                    <img src="{{ produto['imagem'] }}" alt="{{ produto['nome'] }}" class="item-imagem">
                     <div class="item-info">
-                        <span class="item-nome">Cesta de Café da Manhã</span>
-                        <span class="item-quantidade">Quantidade: 1</span>
-                        <span class="item-preco">R$ 49,90</span>
+                        <span class="item-nome">{{ produto['nome'] }}</span>
+                        <span class="item-quantidade">Quantidade: {{ produto['carrinho'] }}</span>
+                        <span class="item-preco">{{ produto['preco'] }}</span>
                     </div>
-                    <button class="remover">Remover</button>
+                    <button class="adicionar" data-product-id="{{ produto['id'] }}">Adicionar</button>
+                    <button class="remover" data-product-id="{{ produto['id'] }}">Remover</button>
                 </div>
             </li>
-            <li>
-                <div class="item">
-                    <img src="../static/image/download (1).jpeg" alt="Imagem do Produto" class="item-imagem">
-                    <div class="item-info">
-                        <span class="item-nome">Cesta de Café da Manhã</span>
-                        <span class="item-quantidade">Quantidade: 1</span>
-                        <span class="item-preco">R$ 49,90</span>
-                    </div>
-                    <button class="remover">Remover</button>
-                </div>
-            </li>
+            {% endfor %}
             <!-- Itens serão carregados dinamicamente -->
         </ul>
-
-        <!-- Total do carrinho -->
+        
          <div class="total-carrinho">
-            <p id="total">Total: R$ 0,00</p>
-            <p id="total-itens">Total de Itens : 1</p>
+            <p id="total">
+                {% set total = namespace(value=0) %}
+                {% for produto in produtos %}
+                    {% set preco_string = produto['preco'] %}
+                    {% set preco_limpo = preco_string|replace('R$ ', '')|replace(',', '.') %}
+                    {% set preco_float = preco_limpo|float %}
+                    {% set quantidade = produto['carrinho']|int %}
+                    {% set total.value = total.value + (preco_float * quantidade) %}
+                {% endfor %}
+
+                Total: R$ {{ total.value|round(2) }}
+                
+            </p>
+
+
+            <p id="total-itens">
+                {% set contagem = namespace(value=0) %}
+
+                {% for produto in produtos %}
+                    {% set contagem.value = contagem.value + (1 * produto['carrinho']) %}
+                {% endfor %}
+
+                Total de Itens : {{ contagem.value }}
+            </p>
         </div>
         <!-- Ações -->
         <div class="acoes">
@@ -53,5 +65,5 @@
     {% endblock %}
 
     {% block script %}
-    <script src="../static/js/carrinho.js"></script>
+    <script src="../static/js/Carrinho2.js"></script>
     {% endblock %}

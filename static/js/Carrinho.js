@@ -10,7 +10,6 @@ document.getElementById('adicionar-carrinho').addEventListener('click', function
       if (data.success) {
         // Atualizar a quantidade na interface (se necessário)
         // ...
-        alert('Produto adicionado ao carrinho!');
       } else {
         alert('Erro ao adicionar produto ao carrinho.');
       }
