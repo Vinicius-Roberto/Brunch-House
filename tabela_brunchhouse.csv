@@ -1,21 +1,232 @@
-id,nome,preco,imagem,tipo,descricao
-1,Cesta de Páscoa –  “Doce Renascimento”,"R$ 149,99",../static/image/XXXXX.XXX,P,Celebre a Páscoa com uma cesta cheia de sabores e significados
-2,Cesta de Dia das Mães – “Carinho em Cada Detalhe”,"R$ 139,90",,M,Mostre todo o amor e gratidão com uma cesta pensada especialmente para as mães.
-3,Cesta de Namorados – “O amor está na cesta”,"R$ 139,90",,G,"Para comemorar o amor, esta cesta é cheia de delícias e pequenos gestos de carinho."
-4,Cesta de Festa Junina – “Arraiá de Sabores”,"R$ 99,99",,P,Traga o clima de festa junina para quem você gosta com esta cesta temática e divertida.
-5,"Cesta de Aniversário - ""Um novo tempo""","R$ 129,99",,M,"Para comemorar o amor, esta cesta é cheia de delícias e pequenos gestos de carinho."
-6,Cesta de Natal – “Magia e Encanto”,"R$ 149,99",,G,Reúna os sabores e a magia do Natal em uma cesta que celebra união e alegria.
-7,Cesta Bom Dia Clássico:,"R$ 89,99",,P,Ideal para quem adora os sabores tradicionais de um café da manhã simples e delicioso. C
-8,Cesta Café da Manhã Fitness:,"R$ 129,99",,M,Perfeita para quem adota um estilo de vida saudável e quer começar o dia com energia.
-9,Cesta Doce Manhã:,"R$ 139,99",,G,Feita para quem adora começar o dia com sabores açucarados e delicados.
-10,Cesta Café a Dois:,"R$ 99,99",,P,"Pensada para momentos românticos e especiais, onde cada detalhe reforça o amor e a conexão."
-11,Cesta Manhã Tropical:,"R$ 109,99",,M,"Traz a leveza e a frescura dos sabores tropicais, perfeita para quem adora frutas e alimentos leves."
-12,Cesta Café Gourmet,"R$ 139,99",,G,Escolha perfeita para quem aprecia sabores sofisticados e exclusivos. 
-13,Cesta Manhã de Relaxamento,"R$ 109,99",,P,Perfeita para momentos tranquilos e revigorantes
-14,Cesta Café Vegetariano,"R$ 149,99",,M, Ideal para quem segue uma dieta sem carnes e busca um café da manhã nutritivo e saboroso.
-15,Cesta Manhã Infantil,"R$ 139,99",,G,Criada para encantar e alegrar os pequenos com itens saborosos e divertidos.
-16,Cesta Região Brasileira,"R$ 99,99",,P,"Celebra os sabores autênticos do Brasil, trazendo o gostinho de casa para um café da manhã especial."
-17,Espumante - Adicional,"R$ 99,99",,Adicional,Delicoso espumante nacional para celebração de momentos.
-18,Vinho - Adicional,"R$ 199,99",,Adicional,"Vinho chileno, feito para amplificar a alegria de momentos com alguém."
-19,Balões - Adicional,"R$ 39,99",,Adicional,"Balões de cores diversas, para incrementar uma comemoração,"
-20,Flores - Adicional,"R$ 79,99",,Adicional,
+id,nome,preco,imagem,tipo,descricao,carrinho,detalhes
+1,Cesta de Páscoa –  “Doce Renascimento”,"R$ 149,99",../static/image/Produtos/pascoa.jpeg,P,Celebre a Páscoa com uma cesta cheia de sabores e significados,0,"Detalhes da Cesta:
+
+Ovos de chocolate artesanais (diversos tamanhos e sabores).
+Coelhos de chocolate.
+Biscoitos amanteigados decorados com tema de Páscoa.
+Um pequeno arranjo de flores (como lírios ou margaridas).
+Uma mensagem sobre renovação e esperança."
+2,Cesta de Dia das Mães – “Carinho em Cada Detalhe”,"R$ 139,90",../static/image/Produtos/diadasmaes.jpeg,M,Mostre todo o amor e gratidão com uma cesta pensada especialmente para as mães.,0,"Detalhes da Cesta:
+
+Uma vela aromática ou difusor de ambiente.
+Caixa de bombons gourmet.
+Um mini buquê de flores (rosas ou lírios).
+Um diário ou caderno bonito.
+Um chá premium ou café especial.
+Uma mensagem escrita à mão com palavras de carinho."
+3,Cesta de Namorados – “O amor está na cesta”,"R$ 139,90",../static/image/Produtos/namorados.jpeg,G,"Para comemorar o amor, esta cesta é cheia de delícias e pequenos gestos de carinho.",0,"Detalhes da Cesta:
+
+Uma garrafa de vinho ou espumante.
+Queijos e geleias artesanais.
+Um coração de chocolate recheado.
+Velas decorativas para criar um clima romântico.
+Um cartão personalizado para expressar sentimentos.
+Uma mini caixinha de ""memórias do casal"" (com fotos ou bilhetes)."
+4,Cesta de Festa Junina – “Arraiá de Sabores”,"R$ 99,99",../static/image/Produtos/junina.jpeg,P,Traga o clima de festa junina para quem você gosta com esta cesta temática e divertida.,0,"Detalhes da Cesta:
+
+Paçoca e pé de moleque.
+Cocada cremosa.
+Mini bolo de milho ou fubá.
+Bandeirinhas decorativas dentro da cesta.
+Saquinhos de pipoca doce e salgada.
+Um chapéu de palha decorativo ou enfeites juninos."
+5,Cesta de Natal – “Magia e Encanto”,"R$ 149,99",../static/image/Produtos/natal.jpeg,G,Reúna os sabores e a magia do Natal em uma cesta que celebra união e alegria.,0,"Detalhes da Cesta:
+
+Panetone ou chocotone.
+Um vinho ou espumante.
+Biscoitos natalinos em formatos de estrelas e árvores.
+Um pequeno enfeite de Natal (como um mini Papai Noel ou um sino).
+Frutas secas e castanhas.
+Uma vela temática com aroma de canela.
+Uma mensagem de boas festas em um cartão especial."
+6,Cesta Bom Dia Clássico:,"R$ 89,99",../static/image/Produtos/classico.jpeg,P,"A Cesta Bom Dia Clássico é a escolha ideal para quem adora os sabores tradicionais de um café da manhã simples e delicioso. Cada item foi pensado para proporcionar conforto e nostalgia, transformando qualquer manhã em um momento especial. Com pães frescos, bebidas quentes e um toque de doçura, essa cesta é perfeita para começar o dia com energia e alegria.",0,"Detalhes da Cesta:
+    
+    Delícias Doces:
+    Mini bolos caseiros de cenoura ou chocolate.
+    Geleias artesanais em potes pequenos.
+    Cookies amanteigados para acompanhar o café.
+    
+    Sabores Salgados:
+    Pães frescos (francês e de forma).
+    Requeijão cremoso e manteiga fresca.
+    Fatias de queijo e presunto para um sanduíche clássico.
+    
+    Bebidas:
+    Sachês de café premium ou cápsulas de café.
+    Um pequeno pote de leite ou creme de leite fresco.
+    Suco de laranja natural para complementar o café da manhã.
+  
+    Itens Personalizados:
+    Um guardanapo decorativo.
+    Um pequeno arranjo de flores para dar charme."
+7,Cesta Café da Manhã Fitness:,"R$ 129,99",../static/image/Produtos/fitness.jpeg,M,"A Cesta Café da Manhã Fitness é perfeita para quem adota um estilo de vida saudável e quer começar o dia com energia. Recheada de ingredientes frescos e nutritivos, essa cesta une sabor e cuidado. Cada detalhe foi pensado para oferecer uma refeição leve, equilibrada e cheia de vitalidade.",0,"Detalhes da Cesta:
+    
+    Delícias Doces:
+    Barrinhas de cereal caseiras.
+    Frutas secas (uva-passa, damasco e castanhas).
+    Um pote pequeno de mel orgânico.
+
+    Sabores Salgados:
+    Pão integral ou torradinhas integrais.
+    Pasta de amendoim ou homus caseiro.
+    Queijo branco ou ricota.
+    
+    Bebidas:
+    Água de coco ou suco detox em garrafinhas.
+    Sachês de chá verde ou de hibisco.
+
+    Itens Personalizados:
+    Uma mensagem motivacional para começar o dia.
+    Talheres e copo reutilizáveis para estimular a sustentabilidade."
+8,Cesta Doce Manhã:,"R$ 139,99",../static/image/Produtos/docemanha.jpeg,G,"A Cesta Doce Manhã foi feita para quem adora começar o dia com sabores açucarados e delicados. Ideal para um presente cheio de carinho ou para celebrar uma data especial, ela traz uma combinação irresistível de guloseimas e bebidas reconfortantes.",0,"Detalhes da Cesta:
+    
+    Delícias Doces:
+    Donuts recheados e decorados.
+    Croissants de chocolate e caramelo.
+    Mini bolos de laranja com cobertura açucarada.
+
+    Sabores Salgados:
+    Pães doces como brioche ou pão de leite.
+    Cream cheese e geleia de frutas vermelhas.
+    
+    Bebidas:
+    Sachês de capuccino cremoso ou chocolate quente.
+    Um pequeno pote de chantilly para acompanhar.
+
+    Itens Personalizados:
+    Um cartão com tema romântico ou alegre.
+    Decorações como balinhas coloridas ou fitas."
+9,Cesta Café a Dois:,"R$ 99,99",../static/image/Produtos/cafeadois.jpeg,P,"A Cesta Café a Dois é pensada para momentos românticos e especiais, onde cada detalhe reforça o amor e a conexão. Ideal para comemorações como aniversários de namoro ou uma manhã a dois, ela une delícias doces e salgadas para um café da manhã memorável.",0,"Detalhes da Cesta:
+
+    Delícias Doces:
+    Trufas de chocolate ou brigadeiros gourmet.
+    Frutas vermelhas frescas (morango, cereja ou amora).
+    Uma pequena torta ou bolo de chocolate compartilhável.
+
+    Sabores Salgados:
+    Mini croissants recheados com queijo e presunto.
+    Queijos finos como brie ou gouda.
+    Um pão rústico com um toque artesanal.
+
+    Bebidas:
+    Uma garrafa de espumante ou suco de uva integral.
+    Sachês de café ou chá aromático.
+
+    Itens Personalizados:
+    Um cartão com uma mensagem de amor.
+    Uma pequena vela decorativa para criar um clima especial."
+10,Cesta Manhã Tropical:,"R$ 109,99",../static/image/Produtos/tropical.jpeg,M,"A Cesta Manhã Tropical traz a leveza e a frescura dos sabores tropicais, perfeita para quem adora frutas e alimentos leves. Ideal para os dias quentes, essa cesta é refrescante, saudável e cheia de vida, garantindo um início de dia delicioso.",0,"Detalhes da Cesta:
+
+    Delícias Doces:
+    Frutas tropicais (abacaxi, melão e mamão).
+    Geleia de manga ou maracujá.
+    Bolo de coco fresco com cobertura de leite condensado.
+
+    Sabores Salgados:
+    Pães com toque de coco ou pão doce.
+    Queijo coalho ou cream cheese.
+
+    Bebidas:
+    Água de coco em uma garrafinha decorativa.
+    Smoothie tropical (manga e maracujá).
+
+    Itens Personalizados:
+    Um leque decorativo ou um pequeno enfeite tropical.
+    Guardanapos coloridos para criar uma atmosfera alegre."
+11,Cesta Café Gourmet,"R$ 139,99",../static/image/Produtos/gourmet.jpeg,G,"A Cesta Café Gourmet é a escolha perfeita para quem aprecia sabores sofisticados e exclusivos. Cada item foi cuidadosamente selecionado para proporcionar uma experiência única, repleta de requinte e charme. Ideal para presentear alguém especial ou para começar o dia de maneira luxuosa.
+",0," Detalhes da Cesta:
+
+    Delícias Doces:
+    Petit fours (biscoitos finos amanteigados).
+    Torta ou mini bolo de limão siciliano.
+    Geleias importadas de frutas exóticas (figo, damasco).
+
+    Sabores Salgados:
+    Pães artesanais (sourdough ou ciabatta).
+    Queijo brie ou camembert.
+    Salmão defumado com limão.
+
+    Bebidas:
+    Café moído especial ou cápsulas gourmet.
+    Um pequeno espumante ou prosecco.
+    Sachês de chá preto com especiarias.
+
+    Itens Personalizados:
+    Talheres de madeira ou inox em miniatura.
+    Uma pequena flor em vaso ou um guardanapo de linho."
+12,Cesta Manhã de Relaxamento,"R$ 109,99",../static/image/Produtos/relaxamento.jpeg,P,"A Cesta Manhã de Relaxamento é perfeita para momentos tranquilos e revigorantes. Ela combina sabores suaves e itens que promovem o bem-estar, sendo uma ótima escolha para quem precisa de uma pausa relaxante ou de um presente acolhedor.",0,"Detalhes da Cesta:
+  
+    Delícias Doces:
+    Mini bolos de lavanda ou laranja.
+    Cookies com gotas de chocolate branco.
+    Um pote pequeno de mel orgânico.
+    
+    Sabores Salgados:
+    Pães de leite ou integrais.
+    Manteiga temperada com ervas.
+    Queijo cremoso light.
+
+    Bebidas:
+    Sachês de chá calmante (camomila ou erva-cidreira).
+    Suco de maçã natural em garrafa de vidro.
+    
+    Itens Personalizados:
+    Vela aromática com toque floral.
+    Um cartão com frases inspiradoras."
+13,Cesta Café Vegetariano,"R$ 149,99",../static/image/Produtos/vegetariano.jpeg,M,A Cesta Café Vegetariano é ideal para quem segue uma dieta sem carnes e busca um café da manhã nutritivo e saboroso. Os ingredientes frescos e saudáveis tornam essa cesta uma opção irresistível para celebrar datas especiais ou para o dia a dia.,0," Detalhes da Cesta:
+  
+    Delícias Doces:
+    Muffins integrais de banana e canela.
+    Geleias de frutas feitas artesanalmente.
+    Frutas secas (damasco, figo).
+
+    Sabores Salgados:
+    Pães integrais ou sem glúten.
+    Tofu defumado ou queijo vegetal.
+    Hummus caseiro em potinhos individuais.
+    
+    Bebidas:
+    Leite vegetal (amêndoa, aveia ou coco).
+    Chá de hortelã ou limão em sachês.
+
+    Itens Personalizados:
+    Um potinho reutilizável para guardar alimentos.
+    Talheres biodegradáveis."
+14,Cesta Manhã Infantil,"R$ 139,99",../static/image/Produtos/infantil.jpeg,G,"A Cesta Manhã Infantil foi criada para encantar e alegrar os pequenos com itens saborosos e divertidos. Com formatos lúdicos e cores vibrantes, ela transforma o café da manhã em um momento mágico e especial.",0,"Detalhes da Cesta:
+
+    Delícias Doces:
+    Mini cupcakes decorados com confeitos coloridos.
+    Cookies em formato de animais ou estrelas.
+    Geleias doces com embalagem divertida.
+
+    Sabores Salgados:
+    Pães de queijo pequenos.
+    Torradinhas com cream cheese.
+    Mini sanduíches recheados com queijo e presunto.
+
+    Bebidas:
+    Achocolatado ou leite com sabor.
+    Suco de uva integral ou de frutas variadas.
+
+    Itens Personalizados:
+    Um brinquedo pequeno ou jogo de quebra-cabeça.
+    Guardanapos com personagens infantis."
+15,Cesta Região Brasileira,"R$ 99,99",../static/image/Produtos/brasileiro.jpeg,P,"A Cesta Região Brasileira celebra os sabores autênticos do Brasil, trazendo o gostinho de casa para um café da manhã especial. Recheada de delícias típicas, ela é ideal para quem valoriza a riqueza cultural e gastronômica do país.",0,"Detalhes da Cesta:
+    
+    Delícias Doces:
+    Doce de leite mineiro ou goiabada cascão.
+    Cocada cremosa ou de forno.
+    Bolinho de chuva com açúcar e canela (em saquinho).
+    
+    Sabores Salgados:
+    Pão de queijo mineiro.
+    Tapioca com recheio de coco ou queijo.
+    Queijo coalho ou manteiga do sertão.
+    
+    Bebidas:
+    Café coado tradicional brasileiro.
+    Suco natural de laranja ou caju.
+
+    Itens Personalizados:
+    Um pequeno enfeite de artesanato local.
+    Embalagem decorada com fitas coloridas ou estampas regionais."
