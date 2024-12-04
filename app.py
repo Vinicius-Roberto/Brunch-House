@@ -67,7 +67,7 @@ def remover_do_carrinho(id):
             return jsonify({'error': 'Produto já está com quantidade zero'})
     else:
         return jsonify({'error': 'Produto não encontrado'})
-        
+
 @app.route("/produtos-destaque")
 def destaque():
     return render_template("produto-destaque.html")
@@ -78,7 +78,21 @@ def especiais():
 
 @app.route("/pagamento")
 def pagamento():
-    return render_template("pagamento.html")
+    df = pd.read_csv('tabela_brunchhouse.csv')
+    produtos = df[df['carrinho'] > 0]
+    produtos = produtos.to_dict('records')
+    return render_template("pagamento.html", produtos=produtos)
+
+@app.route('/finalizar-compra', methods=['POST'])
+def finalizar_compra():
+    # Carrega os dados do carrinho (substitua pela sua lógica)
+    df = pd.read_csv('tabela_brunchhouse.csv')
+
+    # Atualiza a quantidade de todos os produtos para zero
+    df['carrinho'] = 0
+    df.to_csv('tabela_brunchhouse.csv', index=False)
+
+    return jsonify({'success': True})
 
 @app.route("/cadastro-cartao")
 def cadastro():

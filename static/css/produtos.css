@@ -136,10 +136,11 @@ header a img {
 
 .produto-item {
     display: inline-block;
+    position: relative;
     background-color: #D9CEC5;
     width: auto; /* Tamanho fixo do card */
     max-width: 250px;
-    height: auto; /* Altura do card (ajuste conforme necessário) */
+    height: 375px; /* Altura do card (ajuste conforme necessário) */
     /* border: 1px solid black; */
     border-radius: 20px;
     justify-content: center;
@@ -147,14 +148,18 @@ header a img {
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 .produto-item img{
-    max-width: 100%;
+    width: 100%;
+    max-height: 250px;
+
 }
 
 .detalhes{
     display: flex;
+    position: absolute;
     align-items: center;
-    justify-content: space-between;
-    padding: 30px 20px 30px 20px;
+   justify-self: center;
+    gap: 50px;
+    bottom: -20px;
 }
 
 .produto-item p {
