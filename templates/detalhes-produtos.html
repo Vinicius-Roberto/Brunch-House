@@ -7,7 +7,7 @@
 
     {% block content %}
     <main>
-        <img src="../static/image/image-banner.png" alt="" class="image-item">
+        <img src="{{ produto['imagem'] }}" alt="" class="image-item">
         <section id="details">
             <h2 id="name-item">{{ produto['nome'] }}</h2>
             <p id="details-text">{{ produto['descricao'] }}</p>
@@ -38,39 +38,13 @@
         modal.style.display = 'none';
       }
     });
-  </script> -->
-  <!-- <script src="script.js"></script>
+  </script>
+  <script src="script.js"></script>
     </main>
 
     <section class="more-details">
-        <h3>Detalhes da cesta:</h3>
-        <h4>Delícias Doces:</h4>
-    <ul>
-        <li>Mini bolos decorados com tema romântico.</li>
-        <li>Brigadeiros e trufas artesanais em caixinhas personalizadas.</li>
-        <li>Um pote de mel ou geleia caseira para adoçar o momento.</li>
-    </ul>
-
-    <h4>Sabores Salgados:</h4>
-    <ul>
-        <li>Pães de queijo quentinhos.</li>
-        <li>Mini croissants recheados.</li>
-        <li>Um toque especial de queijos e frios selecionados.</li>
-    </ul>
-
-    <h4>Bebidas:</h4>
-    <ul>
-        <li>Uma garrafa de espumante ou suco natural para brindar.</li>
-        <li>Sachês de café gourmet ou chá aromático.</li>
-    </ul>
-
-    <h4>Itens Personalizados:</h4>
-    <ul>
-        <li>Um cartão personalizado com uma mensagem especial para a data.</li>
-        <li>Um buquê de flores pequenas para dar o toque final.</li>
-    </ul>
+        <h4 class="details">{{ produto['detalhes'] }}</h4>
     </section>
-
     {% endblock %}
 
     {% block script %}

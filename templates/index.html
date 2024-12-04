@@ -28,48 +28,17 @@
     <section id="produtos-destaque" class="produtos-destaque">
         <h2>PRODUTOS EM DESTAQUE</h2>
         <div class="produtos-grid">
-            <div class="produto-item">
-                <img src="../static/image/download (1).jpeg" alt="">
-                <p class="small-description">Amor em Cada Mordida</p>
-                <div class="detalhes">
-                    <span class="preco">R$200</span>
-                    <a href="detalhes-produtos" class="detalhes-btn">Detalhes</a>
-                </div>
-            </div>
-            <div class="produto-item">
-                <img src="../static/image/download (1).jpeg" alt="">
-                <p class="small-description">Cesta Bom Dia Clássico</p>
-                <div class="detalhes">
-                    <span class="preco">R$200</span>
-                    <a href="" class="detalhes-btn">Detalhes</a>
-                </div>
-            </div>
-            <div class="produto-item">
-                <img src="../static/image/download (1).jpeg" alt="">
-                <p class="small-description">Lorem Ipsum</p>
-                <div class="detalhes">
-                    <span class="preco">R$200</span>
-                    <a href="" class="detalhes-btn">Detalhes</a>
-                </div>
-            </div>
-            <div class="produto-item">
-                <img src="../static/image/download (1).jpeg" alt="">
-                <p class="small-description">Lorem Ipsum</p>
-                <div class="detalhes">
-                    <span class="preco">R$200</span>
-                    <a href="" class="detalhes-btn">Detalhes</a>
-                </div>
-            </div>
-            <div class="produto-item">
-                <img src="../static/image/download (1).jpeg" alt="">
-                <p class="small-description">Lorem Ipsum</p>
-                <div class="detalhes">
-                    <span class="preco">R$200</span>
-                    <a href="" class="detalhes-btn">Detalhes</a>
-                </div>
-            </div>
 
-            <!-- Mais produtos aqui -->
+            {% for produto in produtoDestaque %}
+            <div class="produto-item">
+                <img src="{{ produto['imagem'] }}" alt="produto['nome']">
+                <p class="small-description">{{ produto['nome'] }}</p>
+                <div class="detalhes">
+                    <span class="preco">{{ produto['preco'] }}</span>
+                    <a href="detalhes-produtos/{{ produto['id'] }}" class="detalhes-btn">Detalhes</a>
+                </div>
+            </div>
+            {% endfor %}
         </div>
     </section>
 
@@ -77,51 +46,16 @@
      <section id="produtos-especiais" class="date">
         <h2>PRODUTOS POR DATAS COMEMORATIVAS</h2>
         <div class="produtos-grid">
+            {% for produto in produtoData %}
             <div class="produto-item">
-                <img src="../static/image/download (1).jpeg" alt="">
-                <p class="small-description">Cesta de Páscoa – “Doce Renascimento”</p>
+                <img src="{{ produto['imagem'] }}" alt="produto['nome']">
+                <p class="small-description">{{ produto['nome'] }}</p>
                 <div class="detalhes">
-                    <span class="preco">R$200</span>
-                    <a href="detalhes-produtos" class="detalhes-btn">Detalhes</a>
+                    <span class="preco">{{ produto['preco'] }}</span>
+                    <a href="detalhes-produtos/{{ produto['id'] }}" class="detalhes-btn">Detalhes</a>
                 </div>
             </div>
-            <div class="produto-item">
-                <img src="../static/image/download (1).jpeg" alt="">
-                <p class="small-description">Cesta de Dia das Mães – “Carinho em Cada Detalhe”</p>
-                <div class="detalhes">
-                    <span class="preco">R$200</span>
-                    <a href="detalhes-produtos.html" class="detalhes-btn">Detalhes</a>
-                </div>
-            </div>
-            <div class="produto-item">
-                <img src="../static/image/download (1).jpeg" alt="">
-                <p class="small-description">Cesta de Namorados – “Amor e Sabores”</p>
-                <div class="detalhes">
-                    <span class="preco">R$200</span>
-                    <a href="detalhes-produtos.html" class="detalhes-btn">Detalhes</a>
-                </div>
-            </div>
-            <div class="produto-item">
-                <img src="../static/image/download (1).jpeg" alt="">
-                <p class="small-description">Cesta de Festa Junina – “Arraiá de Sabores”</p>
-                <div class="detalhes">
-                    <span class="preco">R$200</span>
-                    <a href="detalhes-produtos.html" class="detalhes-btn">Detalhes</a>
-                </div>
-            </div>
-            <div class="produto-item">
-                <img src="/static/image/natal.jpg" alt="">
-                <p class="small-description">Cesta de Natal – “Magia e Encanto”</p>
-                <div class="detalhes">
-                    <span class="preco">R$200</span>
-                    <a href="detalhes-produtos.html" class="detalhes-btn">Detalhes</a>
-                </div>
-            </div>
-
-            </div>
-        
-
-            <!-- Mais produtos aqui -->
+            {% endfor %}
         </div>
         
      </section>

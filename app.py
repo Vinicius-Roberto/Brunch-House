@@ -7,7 +7,16 @@ app = Flask(__name__)
 @app.route("/")
 @app.route("/index")
 def index():
-    return render_template("index.html")
+    df = pd.read_csv('tabela_brunchhouse.csv')
+
+    # Obtendo os últimos 5 produtos
+    ultimos_5 = df.tail(5).to_dict('records')
+
+    # Obtendo os 5 antepenúltimos produtos
+    antepenultimos_5 = df[5:10].to_dict('records')
+
+    # Enviando os dados para o template
+    return render_template("index.html", produtoDestaque=ultimos_5, produtoData=antepenultimos_5)
 
 @app.route("/perfil")
 def perfil():
