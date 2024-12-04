@@ -26,10 +26,10 @@
 </header>
 <nav class="menu">
     <ul>
-        <li><a href="/produtos">Produtos</a></li>
-        <li><a href="/index#produtos-destaque">Favoritos</a></li>
-        <li><a href="/index#produtos-especiais">Cestas Comemorativas</a></li>
-        <li><a href="/index#sobre-nos">Sobre Nós</a></li>
+        <li><a href="/index" {% if request.endpoint == 'index' %} class="active"{% endif %}>Home</a></li>
+        <li><a href="/produtos" {% if request.endpoint == 'produtos' %} class="active"{% endif %}>Produtos</a></li>
+        <li><a href="/carrinho" {% if request.endpoint == 'carrinho' %} class="active"{% endif %}>Carrinho</a></li>
+        <li><a href="#sobre-nos">Sobre Nós</a></li>
     </ul>
 </nav>
 

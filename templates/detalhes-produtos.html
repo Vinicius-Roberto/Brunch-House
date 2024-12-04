@@ -11,7 +11,7 @@
         <section id="details">
             <h2 id="name-item">{{ produto['nome'] }}</h2>
             <p id="details-text">{{ produto['descricao'] }}</p>
-            <button id="adicionar-carrinho"> <img src="../static/image/icon-carrinho.png" alt="">Adicionar ao Carrinho</button>
+            <button id="adicionar-carrinho" data-product-id="{{ produto['id'] }}"> <img src="../static/image/icon-carrinho.png" alt="">Adicionar ao Carrinho</button>
         </section>
         <!-- Modal -->
   <div id="modal" class="modal">
@@ -25,7 +25,6 @@
     // Seleciona os elementos do DOM
     const adicionarCarrinhoBtn = document.getElementById('adicionar-carrinho');
     const modal = document.getElementById('modal');
-    const fecharModalBtn = document.getElementById('fechar-modal');
 
     // Exibe o modal ao clicar no botão "Adicionar ao Carrinho"
     adicionarCarrinhoBtn.addEventListener('click', () => {
@@ -43,10 +42,12 @@
     </main>
 
     <section class="more-details">
+        <h3>Detalhes da cesta:</h3>
+    </br>
         <h4 class="details">{{ produto['detalhes'] }}</h4>
     </section>
     {% endblock %}
 
     {% block script %}
-    <script src="Script.js"></script>
+    <script src="../static/js/AdicionarAoCarrinho.js"></script>
     {% endblock %}

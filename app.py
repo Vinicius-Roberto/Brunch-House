@@ -1,5 +1,5 @@
 import os
-from flask import Flask, render_template
+from flask import Flask, render_template, jsonify
 import pandas as pd
 
 app = Flask(__name__)
@@ -42,6 +42,18 @@ def detalhes(id):
     else:
         # Produto não encontrado
         return "Produto não encontrado"
+
+@app.route("/adicionar-ao-carrinho/<int:id>", methods=["POST"])
+def adicionar_ao_carrinho(id):
+    df = pd.read_csv('tabela_brunchhouse.csv')
+    produto = df[df['id'] == id]
+
+    if not produto.empty:
+        df.loc[produto.index, 'carrinho'] += 1
+        df.to_csv('tabela_brunchhouse.csv', index=False)  # Salva as alterações no CSV
+        return jsonify({'success': True})
+    else:
+        return jsonify({'error': 'Produto não encontrado'})
 
 @app.route("/produtos-destaque")
 def destaque():

@@ -75,6 +75,11 @@ header a img {
 .menu ul li a:hover {
     background-color: #732C02;
 }
+
+.active {
+    background-color: #732C02;
+    font-weight: bold;
+}
 /* Fim nav e Header*/
 
 /* Estilos para o carrossel */
