@@ -9,8 +9,8 @@
     <main>
         <img src="../static/image/image-banner.png" alt="" class="image-item">
         <section id="details">
-            <h2 id="name-item">Amor em Cada Mordida</h2>
-            <p id="details-text">A Cesta Amor em Cada Mordida é perfeita para celebrar o aniversário de namoro com muito carinho e sabor. Ela é cuidadosamente montada para proporcionar uma experiência única, cheia de delícias que agradam ao paladar e aquecem o coração. Cada item foi escolhido para transformar o momento em uma lembrança inesquecível.</p>
+            <h2 id="name-item">{{ produto['nome'] }}</h2>
+            <p id="details-text">{{ produto['descricao'] }}</p>
             <button id="adicionar-carrinho"> <img src="../static/image/icon-carrinho.png" alt="">Adicionar ao Carrinho</button>
         </section>
         <!-- Modal -->
@@ -38,8 +38,8 @@
         modal.style.display = 'none';
       }
     });
-  </script>
-  <!-- <script src="script.js"></script> -->
+  </script> -->
+  <!-- <script src="script.js"></script>
     </main>
 
     <section class="more-details">

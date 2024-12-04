@@ -23,9 +23,16 @@ def produtos():
 def carrinho():
     return render_template("carrinho.html")
 
-@app.route("/detalhes-produtos")
-def detalhes():
-    return render_template("detalhes-produtos.html")
+@app.route("/detalhes-produtos/<int:id>")
+def detalhes(id):
+    df = pd.read_csv('tabela_brunchhouse.csv')
+    produto = df[df['id'] == id].to_dict('records')
+    if produto:
+        produto = produto[0]  # Acessa o primeiro (e único) elemento da lista
+        return render_template("detalhes-produtos.html", produto=produto)
+    else:
+        # Produto não encontrado
+        return "Produto não encontrado"
 
 @app.route("/produtos-destaque")
 def destaque():
@@ -42,6 +49,6 @@ def pagamento():
 @app.route("/cadastro-cartao")
 def cadastro():
     return render_template("cadastrocartao.html")
-    
+
 if __name__ == "__main__":
     app.run(debug=True)
