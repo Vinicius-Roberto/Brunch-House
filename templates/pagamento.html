@@ -1,7 +1,7 @@
 {% extends "default.html" %}
 
     {% block csseTitle %}
-    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="../static/css/pagamento.css">
     <!-- COLAR AQUI SE PRECISAR DE OUTRO CSS -->
 
     <title>Pagamento</title>
@@ -9,11 +9,77 @@
 
     {% block content %}
     <!-- ESCREVER AQUI TODO O CONTEUDO DA PAGINA (NÃO É NECESSARIO COLOCAR HEADER OU FOOTER) -->
+    <main class="container">
+        <section class="pagamento">
+            <h1>Pagamento</h1>
+            <br>
+            <div class="opc-pagamento">
+                <div class="novo-pagamento">
+                    <h3>Novo método de pagamento</h3>
+                    <br>
+                    <ul class="modos">
+                        <a href="cadastro-cartao"><li class="modo"><img src="/static/image/cartaoicone.png" alt="">Cartão de Crédito</li></a>
+                        <li class="modo"><img src="/static/image/pixicon.png" alt="">PIX</li>
+                        <li class="modo"><img src="/static/image/moneyicone.png" alt="">Dinheiro Físico</li>
+                    </ul>
+                </div>
+                <div class="cartao-salvo">
+                    <h3>Cartão salvo</h3>
+                    <label><input type="radio" name="cartao"> 000-XXX-XXX-XX</label>
+                    <label><input type="radio" name="cartao"> 000-XXX-XXX-XX</label>
+                    <label><input type="radio" name="cartao"> 000-XXX-XXX-XX</label>
+                </div>
+            </div>
+        </section>
 
+        <section class="endereco">
+            <h2>Endereço de Entrega</h2>
+            <br>
+            <form>
+               <p>Rua:<input type="text" placeholder="Ex: Rua da Capela, 21"></p>
+               <p>Bairro:</p> <input type="text" placeholder="Ex: Jardim São Paulo">
+               <p>Cidade:</p> <input type="text" placeholder="Ex: Recife">
+               <p>UF:</p> <input type="text" placeholder="Ex: PE">
+               <p>CEP:</p> <input type="text" placeholder="Ex: 51234-453">
+            </form>
+        </section>
+
+        <section class="sumario">
+            <p>Total de itens: <strong>4</strong></p>
+            <p>Valor Total: <strong>R$200,00</strong></p>
+        </section>
+
+        <button id="finalize">Finalizar Compra</button>
+
+        <div id="modal" class="modal">
+            <div class="modal-content">
+              <p>Sua Compra foi feita</p>
+              <a href="index"><button id="pagamento-concluido">Ir a pagina inicial</button></a>
+            </div>
+          </div>
+    </main>
 
     {% endblock %}
 
     {% block script %}
     <!-- LINKAR AQUI O SCRIPT QUE FOR UTILIZADO -->
-     
+     <script>
+    // Seleciona os elementos do DOM
+    const adicionarCarrinhoBtn = document.getElementById('finalize');
+    const modal = document.getElementById('modal');
+    const fecharModalBtn = document.getElementById('fechar-modal');
+
+    // Exibe o modal ao clicar no botão "Adicionar ao Carrinho"
+    adicionarCarrinhoBtn.addEventListener('click', () => {
+      modal.style.display = 'flex';
+    });
+
+    // Fecha o modal ao clicar fora da área de conteúdo
+    modal.addEventListener('click', (event) => {
+      if (event.target === modal) {
+        modal.style.display = 'none';
+      }
+    });
+  </script>
+  <script src="Script.js"></script>
     {% endblock %}
