@@ -4,68 +4,7 @@
     margin: 0;
     box-sizing: border-box;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-
-body {
-    background-color: #D9B68B;
-}
-
-/* Header */
-header {
-    max-width: 100%;
-    display: flex;
-    background-color: #732C02;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px;
-}
-
-.logo {
-    margin: 0 0 0 20px;
-    color: #D9B68B;
-    font-family: "Italiana", sans-serif;
-    font-size: 30px;
-    text-decoration: solid;
-}
-
-header a img {
-    width: 20px;
-    margin: 0 20px 0 0;
-}
-
-/* Nav do menu */
-.menu {
-    width: 100%;
-    background-color: #401801;
-    padding: 10px 0;
-    box-sizing: border-box;
-}
-
-.menu ul {
-    display: flex;
-    flex-wrap: wrap;
-    list-style-type: none;
-    justify-content: space-around;
-    padding: 0;
-    margin: 0;
-}
-
-.menu ul li {
-    flex: 1;
-    text-align: center;
-}
-
-.menu ul li a {
-    text-decoration: none;
-    color: #D9B68B;
-    padding: 10px 50px;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    white-space: nowrap;
-}
-
-.menu ul li a:hover {
-    background-color: #732C02;
-}
+} 
 /* Estilo principal */
 main {
     max-width: 900px;
@@ -82,7 +21,9 @@ h1#title {
     margin-bottom: 20px;
 }
 
-
+main {
+    min-height: 60vh;
+}
 
 /* Estilo do item no carrinho */
 #lista-carrinho li {
